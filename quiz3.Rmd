@@ -1,0 +1,44 @@
+---
+title: "quiz-3-presentation"
+output: ioslides_presentation
+date: "Nov 30,2018"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+library(plotly)
+```
+
+## mtcars data set
+### Effect of number of cylinders
+```{r}
+data(mtcars)
+g1<-qplot(wt,mpg,data = mtcars,color= cyl,xlab="weight",ylab = "miles per gallon")
+g2<-qplot(wt,mpg,data = mtcars,color= hp,xlab="weight",ylab = "miles per gallon")
+g3<-qplot(wt,mpg,data = mtcars,color= disp,xlab="weight",ylab = "miles per gallon")
+g4<-qplot(wt,mpg,data = mtcars,color= gear, xlab="weight",ylab = "miles per gallon")
+ggplotly(g1)
+```
+
+
+
+## Effect of horse power
+```{r}
+ggplotly(g2)
+```
+
+## Effect of displacement
+```{r}
+ggplotly(g3)
+```
+
+## Effect of number of gears
+```{r}
+ggplotly(g4)
+```
+
+
+## Thank you
+
+
